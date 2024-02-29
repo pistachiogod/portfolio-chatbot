@@ -20,7 +20,7 @@ app = Dash(__name__)
 server = app.server
 app.layout = html.Div([
     html.H1('Will Blumrosen ChatBot'),
-    html.H3('This AI Chatbot was trained on PDF file of Will Blumrosen. Please ask it any questions regarding Will Blumrosen. For example, what are his favorite movies? What are his hobbies? Wherre has he travled? What jobs has he had? '),
+    html.H3('This AI chatbot was trained on files about Will Blumrosen. Please ask it any questions regarding Will Blumrosen. For example, what are his favorite movies? What are his hobbies? Where has he travled? What jobs has he had? '),
     html.Label('Ask your question:'),
     html.Br(),
     dcc.Textarea(id='question-area', value=None, style={'width': '25%', 'height': 100}),
