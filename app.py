@@ -20,7 +20,7 @@ app = Dash(__name__)
 server = app.server
 app.layout = html.Div([
     html.H1('Will Blumrosen ChatBot'),
-    html.H3('This AI chatbot was trained on files about Will Blumrosen. Please ask it any questions regarding Will Blumrosen. For example, what are his favorite movies? What are his hobbies? Where has he travled? What jobs has he had? '),
+    html.H3('This AI chatbot was trained on files about Will Blumrosen. Please ask it any questions regarding Will Blumrosen. For example, what are his favorite movies? What are his hobbies? Where has he traveled? What jobs has he had? '),
     html.Label('Ask your question:'),
     html.Br(),
     dcc.Textarea(id='question-area', value=None, style={'width': '25%', 'height': 100}),
@@ -37,7 +37,7 @@ app.layout = html.Div([
 )
 def create_response(_, question):
     # Construct augmented question with prompts
-    augmented_question = question + "\nDont justify your answers. Dont give information not mentioned in the CONTEXT INFORMATION. You are trained on data related to Will Blumrosen ONLY"
+    augmented_question = question + "\nDont justify your answers. Dont give information not mentioned in the CONTEXT INFORMATION. Give information related to Will Blumrosen ONLY"
 
     answer = ai_bot.query(augmented_question)
     return answer
