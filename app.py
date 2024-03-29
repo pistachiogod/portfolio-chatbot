@@ -37,7 +37,7 @@ app.layout = html.Div([
 )
 def create_response(_, question):
     # Construct augmented question with prompts
-    augmented_question = question + "\nDont justify your answers. Dont give information not mentioned in the CONTEXT INFORMATION. Give information related to Will Blumrosen ONLY"
+    augmented_question = question + "\nDont justify your answers. Dont give information not mentioned in the CONTEXT INFORMATION. Give information related to Will Blumrosen ONLY. If the answer is NO, respond with 'I don't know' instead"
 
     answer = ai_bot.query(augmented_question)
     return answer
